@@ -22,6 +22,9 @@
           <router-link to="/demand" :class="{ active: $route.path === '/demand' }">
             {{ t('nav.demandForecast') }}
           </router-link>
+          <router-link to="/restocking" :class="{ active: $route.path === '/restocking' }">
+            {{ t('nav.restocking') }}
+          </router-link>
           <router-link to="/reports" :class="{ active: $route.path === '/reports' }">
             Reports
           </router-link>
@@ -343,6 +346,10 @@ body {
   color: #2563eb;
 }
 
+.stat-card.submitted .stat-value {
+  color: #7c3aed;
+}
+
 .card {
   background: white;
   border-radius: 10px;
@@ -435,6 +442,11 @@ tbody tr:hover {
 .badge.info {
   background: #dbeafe;
   color: #1e40af;
+}
+
+.badge.submitted {
+  background: #ede9fe;
+  color: #5b21b6;
 }
 
 .badge.increasing {
